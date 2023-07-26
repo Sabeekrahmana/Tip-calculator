@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <header>
+          <h1>SPLITTER</h1>
+        </header>
+        <main>
+            <div class="mainDiv">
+                <div class="leftSection">
+
+                    <div class="billBox">
+                        <div class="label">
+                            <label>Bill</label>
+                        </div>
+                        <div>
+                            <input type="number" placeholder="0" onchange="handleBill(event)" min="0" id="inputBill">
+                        </div>
+                        <span>$</span>
+                    </div>
+                    <div class="tipBox">
+                        <div class="label">
+                            <label for="customInput"> Select Tip % </label>
+                        </div>
+                        <div class="tipBtnBox">
+                            <input type="number" placeholder="Custom" onchange="handleCustom(event)" onclick="removeSelectedPercentage()" id="customInput" min="5">
+                        </div>
+                    </div>
+                    <div class="peopleBox">
+                        <div class="label">
+                            <label>Number of People</label>
+                        </div>
+                        <div>
+                            <input type="number" placeholder="1" onchange="handlePerson(event)" id="personInput" min="0">
+                        </div>
+                        <span>👤</span>
+                    </div>
+                    
+                </div>
+
+                <div class="rightSection" id="rightBox">
+
+                    <div class="personAmountBox">
+                        <div class="personAmount">Tip Amount/ Person</div>
+                        <span id="personTip">$ 0.00</span>
+                    </div>
+                    <div class="totalAmountBox">
+                        <div class="totalAmount">Total Tip Amount</div>
+                        <span id="totalTip">$ 0.00</span>
+                    </div>
+                    <div class="resetBtn">
+                        <button onclick="resetAllTip()">Re-set</button>
+                    </div>
+
+                </div>
+            </div>
+
+        </main>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
